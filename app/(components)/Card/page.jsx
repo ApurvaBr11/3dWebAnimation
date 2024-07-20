@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
-const page = () => {
+const CardPage = () => {
     const container = useRef();
 
 useGSAP(() => {
@@ -27,4 +27,4 @@ useGSAP(() => {
   )
 }
 
-export default page
+export default CardPage
