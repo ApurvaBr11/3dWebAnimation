@@ -1,0 +1,147 @@
+/* styles/globals.css */
+:root {
+    --section-color: #EAFE52;
+    --section-size: 150vh;
+    --circle-color: #141414;
+    --circle-size: calc(min(var(--section-size), 80vw) / 1);
+    --icon-size: calc(var(--circle-size) / 4);
+  }
+  
+  span {
+    color: red;
+    font-weight: bold;
+  }
+  
+  section {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+  
+  section .container {
+    top: calc((100vh - var(--section-size)) / 2); /* midle of page */
+    position: sticky;
+    background-color: var(--section-color);
+    height: var(--section-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    overflow: hidden;
+  }
+  
+  section .scroll-trigger {
+    height: var(--section-size);
+  }
+  
+  section .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: calc(var(--circle-size) / 2);
+  }
+  
+  section .description {
+    position: absolute;
+    font-size: 33px;
+    font-weight: bold;
+    color: var(--circle-color);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  section .description.active {
+    opacity: 1;
+  }
+  
+  section .circle {
+    min-width: 500px;
+    min-height: 500px;
+    border-radius: 50%;
+    border: 2px solid var(--circle-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.5s ease;
+  }
+  
+  section .icon {
+    position: absolute;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    border-radius: 50%;
+    border: 2px solid var(--circle-color);
+    background-color: var(--section-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--circle-color);
+    font-size: calc(var(--icon-size) * 0.8);
+    font-weight: bold;
+    margin: calc(var(--icon-size) / -2);
+    transition: transform 0.5s ease;
+  }
+  
+  section .icon.active {
+    background-color: var(--circle-color);
+    color: var(--section-color);
+  }
+  
+  section .icon:nth-child(1) {
+    left: 0;
+  }
+  
+  section .icon:nth-child(2) {
+    bottom: 0;
+  }
+  
+  section .icon:nth-child(3) {
+    right: 0;
+  }
+  
+  section .icon:nth-child(4) {
+    top: 0;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    :root {
+      --circle-size: 120vw;
+      --icon-size: calc(var(--circle-size) / 6);
+    }
+    section .container {
+      align-items: center;
+      justify-content: flex-end;
+      flex-direction: column;
+    }
+    section .content {
+      position: absolute;
+      margin-right: 0;
+      bottom: 20px;
+      justify-content: flex-end;
+      flex-direction: column;
+    }
+    section .description {
+      font-size: calc(var(--circle-size) / 4);
+    }
+    section .circle {
+      margin-bottom: calc(var(--circle-size) / -2);
+    }
+    section .icon:nth-child(1) {
+      top: 0;
+      left: inherit;
+    }
+    section .icon:nth-child(2) {
+      left: 0;
+      bottom: inherit;
+    }
+    section .icon:nth-child(3) {
+      bottom: 0;
+      right: inherit;
+    }
+    section .icon:nth-child(4) {
+      right: 0;
+      top: inherit;
+    }
+  }
+  

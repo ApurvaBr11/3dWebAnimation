@@ -1,0 +1,48 @@
+.slidingpagemain {
+    font-family: 'Poppins';
+}
+
+.wrapper {
+    animation: move 4s;
+}
+
+.wrapper1 {
+    animation: move 2s;
+}
+
+.wrapper2 {
+    animation: move 2s;
+}
+
+.wrapper6 {
+    animation: move 2s;
+}
+
+.wrapper3 {
+    animation: move 3s;
+}
+
+.wrapper4 {
+    animation: move 4.4s;
+}
+
+.wrapper5 {
+    animation: move 3s;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(-600px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.stroke:hover {
+    -webkit-text-stroke: 1px #bd4444;
+    filter: blur(2px);
+    color: transparent;
+    transition: all 0.3s ease-in-out;
+}

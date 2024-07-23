@@ -1,0 +1,60 @@
+video::-webkit-media-controls-start-playback-button {
+  display: none;
+}
+
+.video-wrapper {
+  position: relative;
+  -radius: 5px;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 12.25%;
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rotpar:hover .rot {
+  transform: rotate(12deg);
+  transition: all 0.9s ease-in-out;
+}
+.justifyparent:hover .justi1{
+  transform: translateY(-310px);
+  transition: all 1s ease-in-out;
+}
+.justifyparent:hover .justi2{
+  transform: translateY(310px);
+  transition: all 1s ease-in-out;
+}
+.justi1,.justi2{
+  transition: all 1s ease-in-out;
+}
+
+.rot {
+  transition: all 1s ease-in-out;
+}
+
+.mainbg {
+  background-image: url('/bgcoffee.png');
+}
+.moving{
+    animation: mymove 3s;
+    animation-delay: 3s;
+}
+@keyframes mymove {
+    0%   {
+        transform: translateX(400px);
+    }
+    50%{
+        border: 0px solid transparent;
+    }
+    100%{
+        border: 0px solid blue;
+    }
+  }
+

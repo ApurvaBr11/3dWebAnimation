@@ -1,0 +1,5 @@
+.hov:hover {
+    transform: scale(1000%);
+    transition: all 1s ease-in;
+    background: #ffffff13;
+}

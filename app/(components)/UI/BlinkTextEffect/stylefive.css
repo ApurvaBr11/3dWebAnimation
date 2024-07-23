@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
+  
+.wrap {
+    font-family: 'Yeseva One', cursive;
+    transition: all ease-in-out;
+}
+.two{
+    animation: moveFour 0.4s ;
+    animation-delay: 2s;
+}
+.one{
+    animation: moveOne 1s ;
+    animation-delay: 1s;
+}
+.three{
+    animation: moveThree 0.5s ;
+    animation-delay: 3s;
+}
+.four{
+    animation: moveOne 1s ;
+}
+.five{
+    animation: moveTwo 0.6s ;
+    animation-delay: 1s;
+}
+@keyframes moveOne {
+    0%{
+        color: rgb(255, 255, 255);
+       
+    }
+    50%{
+        color: rgba(255, 255, 255, 0.215);
+        
+    }
+    100%{
+        color: rgb(255, 254, 254);
+    }
+}
+@keyframes moveTwo {
+    0%{
+        color: rgb(255, 255, 255);
+       
+    }
+    70%{
+        color: rgba(255, 255, 255, 0.215);
+        
+    }
+    80%{
+        color: rgb(255, 254, 254);
+    }
+    90%{
+        color: rgba(255, 255, 255, 0.215);
+        
+    }
+    100%{
+        color: rgba(255, 255, 255);
+        
+    }
+}
+@keyframes moveThree {
+    0%{
+        color: rgb(255, 255, 255);
+       
+    }
+    40%{
+        color: rgba(255, 255, 255, 0.215);
+        
+        
+    }
+    60%{
+        color: rgb(255, 254, 254);
+    }
+    70%{
+        color: rgba(255, 255, 255, 0.215);
+        transform: scale(1, 1);
+        
+    }
+    100%{
+        color: rgba(255, 255, 255);
+        
+    }
+}
+@keyframes moveFour {
+    0%{
+        color: rgb(255, 255, 255);
+       
+    }
+    60%{
+        color: rgba(255, 255, 255, 0.215);
+        
+    }
+    65%{
+        color: rgb(255, 254, 254);
+    }
+    80%{
+        color: rgba(255, 255, 255, 0.215);
+        
+    }
+    100%{
+        color: rgba(255, 255, 255);
+        
+    }
+}
+
+
+
+.name {
+    font-size: 150px;
+  }
+
+  .animatesp{
+    animation: move 4s infinite;
+}
+@keyframes move {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes progress1 {
+    0% {
+        transform: scalex(0);
+        opacity: 0.5;
+   }
+    90% {
+        transform: scalex(1);
+        opacity: 1;
+   }
+    92% {
+        transform: scalex(1);
+        opacity: 1;
+   }
+    100% {
+        transform: scalex(1);
+        opacity: 0;
+   }
+}
+
+@keyframes progress2 {
+    0% {
+        transform: scale(0.3, 0.8) translatez(0);
+        opacity: 0;
+   }
+    90% {
+        transform: scale(1, 1) translatex(1500px) translatez(0);
+        opacity: 1;
+   }
+    100% {
+        transform: scale(1, 1) translatex(1500px) translatez(0);
+        opacity: 0;
+   }
+}
+.line {
+    position: absolute;
+    top: 10%;
+    width: 60%;
+    margin: auto 0px;
+    margin-left: 300px;
+    height: 1px;
+    background: rgba(255, 255, 255, .1);
+}
+.line:before {
+    animation: progress1 4s infinite;
+    transform-origin: 0 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0.4) 80%, rgba(255, 255, 255, 1));
+}
+.lin:after {
+    content: "";
+    position: absolute;
+    animation: progress2 4s infinite;
+    transform-origin: 90% 50%;
+    margin-left: -2px;
+    top: -9px;
+    width: 30px;
+    height: 21px;
+    border-radius: 2px;
+    background: rgba(210, 189, 255, .55);
+    filter: blur(8px);
+    box-shadow: 0 0 10px 6px rgba(210, 189, 255, .4), -20px 0 15px 4px rgba(210, 189, 255, .3), -40px 0 15px 2px rgba(210, 189, 255, .2), -60px 0 10px 1px rgba(210, 189, 255, .1), -80px 0 10px 1px rgba(210, 189, 255, .05);
+}

@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+
+.mainContainer:hover .transitionDivv{
+    transform: translateX(-257px);
+    background:rgb(0, 0, 0)
+}
+*{
+    transition: all 0.2s ease;
+}
+.bgr{
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0.017331932773109293) 53%, rgb(0, 0, 0) 100%);
+}
+@media screen and (max-width: 480px) {
+    .mainContainer:hover .transitionDivv{
+        transform: translateX(-313px);
+        background:black
+    }
+  }
+.clrr{
+    background: #6aff68;
+}

@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+.swmain{
+    font-family: "Cormorant Garamond", serif;
+}
+.borderg{
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  }
