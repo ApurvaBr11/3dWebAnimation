@@ -6,9 +6,8 @@ export default function Home() {
    <div className="h-screen px-20 flex items-center justify-center w-screen">
      <div className="flex justify-center flex-wrap gap-4 ">
       {Links.map((e: any) => (
-        <div className="relative my-1">
+        <div className="relative my-1" key={e.id}>
           <Link
-          key={e.id}
           href={e.linkname}
           className="border-gray-600 border rounded-full px-5 py-2 font-bold">
           {e.displayname}
